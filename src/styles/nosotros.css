@@ -53,67 +53,135 @@ section {
 }
 
 /* VALORES */
-.valores {
-    text-align: center;
-}
-
 .valores-grid {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  padding: 2rem 0;
 }
 
 .valores-card {
-    background: white;
-    padding: 2rem 1.5rem;
-    border-radius: 16px;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+  background: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.valores-card:hover {
+  transform: translateY(-5px);
+}
+
+.icon-container {
+  width: 70px;
+  height: 70px;
+  background-color: #f0f7ff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+}
+
+.icon-main {
+  color: #007bff;
+  font-size: 2rem;
 }
 
 .valores-card h3 {
-    margin-top: 1rem;
-    font-size: 1.2rem;
-}
-
-.valores-card p {
-    margin-top: 0.5rem;
-    color: #475569;
+  color: #003366;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
 }
 
 /* MISIONVISION */
 .mision-vision {
+  padding: 2rem 1rem;
+}
+
+.mision-vision h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+
+.mv-grid {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
 }
 
 .mv-card {
-  background: white;
-  padding: 2rem;
-  border-radius: 16px;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.mv-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.mv-icon-circle {
+  width: 45px;
+  height: 45px;
+  background-color: #0056b3;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0; /* Evita que el círculo se deforme */
+  font-size: 1.2rem;
+}
+
+.mv-card h3 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #003366;
 }
 
 /* STATS */
 .stats {
-  background: #0ea5e9;
-  color: white;
-  text-align: center;
+  background-color: #ffffff;
   padding: 2rem 1rem;
+  border-top: 1px solid #eee;
+  margin-top: 30px;
 }
 
 .stats-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); 
+  gap: 1.5rem;
+  text-align: center;
+}
+
+.stat-item {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  align-items: center;
+  justify-content: center;
 }
 
-.stat-item h4 {
-  font-size: 1.5rem;
+.stat-icon {
+  font-size: 2rem;
+  color: #f39c12;
+  margin-bottom: 0.5rem;
 }
 
-.stat-item p {
-  font-size: 0.9rem;
+.stat-text h4 {
+  font-size: 1.2rem;
+  color: #003366;
+  margin: 0;
+}
+
+.stat-text p {
+  font-size: 0.8rem;
+  color: #666;
+  margin: 0;
 }
 
 /* MEDIA QUERIES */
@@ -125,13 +193,30 @@ section {
     flex-direction: row;
   }
 
-  .mision-vision {
+  .mv-grid {
     flex-direction: row;
+    justify-content: center;
+  }
+  
+  .mv-card {
+    flex: 1;
+    max-width: 450px;
+  }
+
+  .stats {
+    margin-top: 100px;
   }
 
   .stats-grid {
-    flex-direction: row;
-    justify-content: space-around;
+    grid-template-columns: repeat(4, 1fr);
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  
+  .stat-item {
+    flex-direction: row; 
+    gap: 10px;
+    text-align: left;
   }
 
   .historia {
@@ -150,7 +235,7 @@ section {
     font-size: 2.5rem;
     font-weight: 700;
     text-align: right;
-}
+  }
 
 .hero-text p {
     margin-top: 0.5rem;
@@ -158,8 +243,7 @@ section {
     color: #dbeafe;
     font-weight: 500;
     text-align: right;
-}
-
+  }
 }
 
 /* DESKTOP */
@@ -183,6 +267,7 @@ section {
 
   .valores h2 {
     font-size: 3.5rem;
+    text-align: center;
   }
 
   .valores-grid {
@@ -204,7 +289,7 @@ section {
 
   .mision-vision h2 {
     font-size: 3rem;
-    margin-right: 50px;
+    margin-bottom: 50px;
   }
 
 }

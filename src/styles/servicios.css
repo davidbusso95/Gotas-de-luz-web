@@ -1,0 +1,124 @@
+/* --- VARIABLES DE COLOR --- */
+:root {
+  --azul-oscuro: #003366;
+  --azul-claro: #007bff;
+  --gris-texto: #666;
+  --blanco: #ffffff;
+}
+
+/* --- HERO SECTION --- */
+.servicios-hero {
+  background: linear-gradient(135deg, #0056b3 0%, #00aaff 100%);
+  padding: 60px 20px;
+  text-align: center;
+  color: var(--blanco);
+  margin-top: 70px;
+}
+
+.servicios-hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.hero-subtitle {
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+/* --- GRID DE SERVICIOS (Mobile First) --- */
+.servicios-section {
+  padding: 40px 15px;
+}
+
+.section-title {
+  text-align: center;
+  color: var(--azul-oscuro);
+  margin-bottom: 30px;
+}
+
+.servicios-grid {
+  display: grid;
+  grid-template-columns: 1fr; /* 1 columna en móvil */
+  gap: 25px;
+}
+
+.servicio-card {
+  background: var(--blanco);
+  border-radius: 20px;
+  padding: 30px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  border: 1px solid #f0f0f0;
+}
+
+.card-icon-wrapper {
+  font-size: 3rem;
+  color: var(--azul-claro);
+  margin-bottom: 20px;
+}
+
+.servicio-card h3 {
+  color: var(--azul-oscuro);
+  margin-bottom: 15px;
+}
+
+.btn-saber {
+  background-color: var(--azul-claro);
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 50px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 15px;
+  transition: background 0.3s;
+}
+
+/* --- PROCESO DE CALIDAD --- */
+.proceso-calidad {
+  padding: 60px 15px;
+  background-color: #f9fcff;
+  border-radius: 30px;
+  margin-top: 40px;
+}
+
+.proceso-desc {
+  text-align: center;
+  color: var(--gris-texto);
+}
+
+.proceso-steps {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2x2 en móvil */
+  gap: 30px;
+  margin-top: 40px;
+  text-align: center;
+}
+
+.step-icon {
+  font-size: 2rem;
+  color: var(--azul-claro);
+  margin-bottom: 10px;
+}
+
+.step span {
+  font-weight: bold;
+  color: var(--azul-oscuro);
+}
+
+/* --- MEDIA QUERIES (Desktop) --- */
+@media (min-width: 992px) {
+  .servicios-grid {
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas en PC */
+  }
+
+  .proceso-steps {
+    grid-template-columns: repeat(4, 1fr); /* 4 en línea en PC */
+    margin-top: 80px;
+  }
+
+  .servicio-card:hover {
+    transform: translateY(-10px);
+    transition: 0.3s;
+  }
+}
