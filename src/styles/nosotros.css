@@ -1,0 +1,210 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background: #f5f7fa;
+    color: #1e293b;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+section {
+    padding: 3rem 1.5rem;
+}
+
+/* HERO-NOSOTROS */
+.hero-nosotros {
+    margin-top: 70px;
+    background: url(../assets/hero-agua.jpg) center/cover;
+    color: #f5f7fa;
+    padding: 10rem 1.5rem;
+}
+
+.hero-text {
+  display: none;
+}
+
+/* HISTORIA */
+.historia {
+    text-align: left;
+}
+
+.historia-texto h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: #0f172a;
+}
+
+.historia-texto p {
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+.historia-texto strong {
+    color: #0ea5e9;
+}
+
+/* VALORES */
+.valores {
+    text-align: center;
+}
+
+.valores-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.valores-card {
+    background: white;
+    padding: 2rem 1.5rem;
+    border-radius: 16px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+}
+
+.valores-card h3 {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+}
+
+.valores-card p {
+    margin-top: 0.5rem;
+    color: #475569;
+}
+
+/* MISIONVISION */
+.mision-vision {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.mv-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+}
+
+/* STATS */
+.stats {
+  background: #0ea5e9;
+  color: white;
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+.stats-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.stat-item h4 {
+  font-size: 1.5rem;
+}
+
+.stat-item p {
+  font-size: 0.9rem;
+}
+
+/* MEDIA QUERIES */
+
+/* TABLET */
+@media (min-width: 768px) {
+
+  .valores-grid {
+    flex-direction: row;
+  }
+
+  .mision-vision {
+    flex-direction: row;
+  }
+
+  .stats-grid {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .historia {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .hero-text {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .hero-text h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: right;
+}
+
+.hero-text p {
+    margin-top: 0.5rem;
+    font-size: 1.1rem;
+    color: #dbeafe;
+    font-weight: 500;
+    text-align: right;
+}
+
+}
+
+/* DESKTOP */
+@media (min-width: 1024px) {
+  .hero-nosotros {
+    height: 80vh;
+    padding: 8rem 7rem;
+  }
+
+  .hero-nosotros h1 {
+    font-size: 3.5rem;
+  }
+
+  .hero-nosotros p {
+    font-size: 1.3rem;
+  }
+
+  section {
+    padding: 5rem 6rem;
+  }
+
+  .valores h2 {
+    font-size: 3.5rem;
+  }
+
+  .valores-grid {
+    justify-content: center;
+    padding-top: 50px;
+  }
+
+  .valores-card h3 {
+    font-size: 2rem;
+  }
+
+  .valores-card {
+    font-size: 1rem;
+  }
+
+  .mision-vision {
+    justify-content: center;
+  }
+
+  .mision-vision h2 {
+    font-size: 3rem;
+    margin-right: 50px;
+  }
+
+}

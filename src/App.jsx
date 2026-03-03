@@ -1,25 +1,18 @@
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
-import Hero from "./components/Hero";
-import Features from "./components/Features";
-import About from "./components/About";
-import Services from "./components/Services";
-import Contact from "./components/Contact";
 import Footer from "./components/Footer";
-
+import Home from "./pages/Home";
+import Nosotros from "./pages/Nosotros";
 
 function App() {
   return (
-
-    <>
+    <Router>
       <Navbar />
-      <Hero />
-      <Features />
-      <About />
-      <Services />
-      <Contact />
-      <Footer />
-      
-    </>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/Nosotros" element={<Nosotros />} />
+      </Routes>
+    </Router>
   );
 }
 

@@ -1,8 +1,12 @@
 import { useState } from "react";
 import logo from "../assets/logo.webp";
+import { Link } from "react-router-dom";
 
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const closeMenu = () => {
+  setMenuOpen(false);
+  };
 
   return (
     <nav className="navbar">
@@ -19,8 +23,8 @@ function Navbar() {
         </div>
 
         <ul className={`nav-links ${menuOpen ? "show" : ""}`}>
-          <li><a href="#">Inicio</a></li>
-          <li><a href="#">Nosotros</a></li>
+          <li><Link to="/" onClick={closeMenu}>Inicio</Link></li>
+          <li><Link to="/nosotros" onClick={closeMenu}>Nosotros</Link></li>
           <li><a href="#">Servicios</a></li>
           <li><a href="#">Contacto</a></li>
         </ul>
